@@ -9,16 +9,27 @@
 </head>
 
 <body>
-    <h1>Image File Format Converter</h1>
+    <header>
+        <h1>Image File Format Converter</h1>
+        <h3>2 easy steps!</h3>
+    </header>
 
-    <form action="/upload" method="POST" enctype="multipart/form-data">
-        <input type="file" name="file" accept=".heic">
-        <button type="submit">Convert to JPG</button>
-    </form>
+    <section>
+        <form action="/upload" method="POST" enctype="multipart/form-data">
+            <article>
+                <h4>1. Choose your image:</h4>
+                <input type="file" name="file" accept=".heic">
+            </article>
+            <article>
+                <h4>2. Click to convert:</h4>
+                <button type="submit" id="convertBtn">Convert to JPG</button>
+            </article>
+        </form>
 
-    {% if error %}
+        {% if error %}
         <p>{{ error }}</p>
-    {% endif %}
+        {% endif %}
+    </section>
 </body>
 
 </html>
